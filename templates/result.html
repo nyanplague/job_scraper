@@ -1,0 +1,68 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+{% include "header.html" %}
+
+<div class="container-results ">
+  <div class = "row">
+
+      <div class="col">
+        <h1>Djinni</h1>
+        {% for key, value in result_djinni.items() %}
+        <a href="https://djinni.co{{value}}">{{key}}</a>
+        <br>
+        {% endfor %}
+      </div>
+
+      <div class="col">
+        <h1>Dou</h1>
+        {% for key,value in result_dou.items() %}
+        <a href="{{value}}">{{key}}</a>
+        <br>
+        {% endfor %}
+      </div>
+
+      <div class="col">
+        <h1>Linkedin</h1>
+        {% for key,value in result_linkedin.items() %}
+        <a href="{{value}}">{{key}}</a>
+        <br>
+        {% endfor %}
+      </div>
+
+<div class="container-fluid">
+  <a type="button" class="btn btn-primary" href="/">Back to search</a>
+</div>
+
+</div>
+</div>
+
+
+
+
+
+
+<!--<div class="welcome">-->
+<!--    {% for i in result_djinni %}-->
+<!--  <h6> {{ i }}</h6>-->
+<!--    {% endfor %}-->
+
+
+<!--    {% for i in result_dou %}-->
+<!--  <h3> {{ i }}</h3>-->
+<!--    {% endfor %}-->
+
+
+<!--    {% for i in result_linkedin %}-->
+<!--  <h1> {{ i }}</h1>-->
+<!--    {% endfor %}-->
+
+<!--</div>-->
+
+
+
+
+
+
+{% endblock %}

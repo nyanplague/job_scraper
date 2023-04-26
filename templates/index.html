@@ -1,0 +1,23 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+{% include "header.html" %}
+
+
+<div class="welcome">
+    <h1> Good luck 😉 </h1>
+</div>
+
+
+<div class="form">
+
+    {{ wtf.quick_form(form, novalidate=True) }}
+
+</div>
+
+
+
+
+
+{% endblock %}
